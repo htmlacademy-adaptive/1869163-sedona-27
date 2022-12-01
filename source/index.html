@@ -15,28 +15,28 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper wrapper">
-          <button class="wrapper__toggle" type="button">
+        <div class="main-nav__wrapper nav-wrapper">
+          <button class="nav-wrapper__toggle" type="button">
             <span class="visually-hidden">Закрыть.</span>
           </button>
           <ul class="main-nav__list menu">
             <li class="menu__item">
-              <a>
+              <a class="menu__link">
                 Главная
               </a>
             </li>
             <li class="menu__item">
-              <a href="catalog.html">
+              <a class="menu__link" href="catalog.html">
                 Фото и видео
               </a>
             </li>
             <li class="menu__item">
-              <a href="form.html">
+              <a class="menu__link" href="form.html">
                 Форма отзыва
               </a>
             </li>
             <li class="menu__item">
-              <a href="#">
+              <a class="menu__link" href="#">
                 HTML Academy
               </a>
             </li>
@@ -46,9 +46,9 @@
     </header>
 
     <main class="main-container">
-      <div class="hero-index">
+      <div class="hero">
         <h1 class="visually-hidden">Добро пожаловать в прекрасную Седону.</h1>
-        <div class="hero-index__img">
+        <div class="hero__img">
           <img src="img/welcome.svg" alt="Природные достопримечательности Седоны.">
         </div>
       </div>
@@ -74,37 +74,35 @@
               <div class="advantages__img">
                 <img src="img/photo-1.jpg" alt="Фотография городка Седона.">
               </div>
-            </li>
+              <ul class="advantages__list list-icon">
+                <li class="list-icon__item list-icon__item--hotels">
+                  <h3 class="advantages__title">
+                    Жилье
+                  </h3>
+                  <p class="advantages__description">
+                    Рекомендуем пожить в настоящем мотеле, все как в кино!
+                  </p>
+                </li>
 
-            <li class="advantages__item advantages__item--hotels">
-              <h3 class="advantages__title">
-                Жилье
-              </h3>
-              <p class="advantages__description">
-                Рекомендуем пожить в настоящем мотеле, все как в кино!
-              </p>
-            </li>
+                <li class="list-icon__item list-icon__item--food">
+                  <h3 class="advantages__title">
+                    Еда
+                  </h3>
+                  <p class="advantages__description">
+                    Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                  </p>
+                </li>
 
-            <li class="advantages__item advantages__item--food">
-              <h3 class="advantages__title">
-                Еда
-              </h3>
-              <p class="advantages__description">
-                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-              </p>
+                <li class="list-icon__item list-icon__item--souvenirs">
+                  <h3 class="advantages__title">
+                    Сувениры
+                  </h3>
+                  <p class="advantages__description">
+                    Не только китайского, но и местного производства!
+                  </p>
+                </li>
+              </ul>
             </li>
-
-            <li class="advantages__item advantages__item--souvenirs">
-              <h3 class="advantages__title">
-                Сувениры
-              </h3>
-              <p class="advantages__description">
-                Не только китайского, но и местного производства!
-              </p>
-            </li>
-          </ul>
-
-          <ul class="advantages__list">
 
             <li class="advantages__item">
               <h3 class="advantages__title">
@@ -144,7 +142,9 @@
                 Большинство едет в гранд каньон и толпится там
               </p>
             </li>
+
           </ul>
+
         </div>
       </section>
 
