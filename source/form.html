@@ -10,6 +10,10 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 </head>
 
 <body>
@@ -96,18 +100,16 @@
               <legend class="form__heading">Контактная информация:</legend>
 
               <ul class="form-block__name-list">
-                <li class="form-block__name-item input-text input-text--icon"><label class="form-block__title"
-                    for="mobile">Контактный
+                <li class="form-block__name-item input-text"><label class="form-block__title" for="mobile">Контактный
                     телефон*:</label>
-                  <input class="input-text__field" type="text" id="mobile" name="mobile" placeholder="Введите телефон"
-                    required>
+                  <input class="input-text__field input-text__field--icon-phone" type="text" id="mobile" name="mobile"
+                    placeholder="Введите телефон" required>
                 </li>
 
-                <li class="form-block__name-item input-text input-text--icon"><label class="form-block__title"
-                    for="email">Электронная
+                <li class="form-block__name-item input-text"><label class="form-block__title" for="email">Электронная
                     почта*:</label>
-                  <input class="input-text__field" type="text" id="email" name="email" placeholder="Введите e-mail"
-                    required>
+                  <input class="input-text__field input-text__field--icon-email" type="text" id="email" name="email"
+                    placeholder="Введите e-mail" required>
                 </li>
               </ul>
             </fieldset>
