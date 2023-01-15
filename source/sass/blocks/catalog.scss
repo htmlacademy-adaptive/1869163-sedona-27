@@ -12,13 +12,40 @@
   }
 }
 
+.catalog__heading {
+  padding: 17px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 6px 0 39px;
+
+    max-width: 435px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 6px 0 50px;
+    margin-top: 92px;
+  }
+}
+
+.catalog__heading .heading__title {
+  margin: 0 0 26px;
+
+  @media (min-width: $tablet-width) {
+    @include gigantic-text(700);
+
+    margin: 0 0 33px;
+  }
+}
+
 .catalog__list {
   padding: 0;
-  margin: 0;
+  margin: 42px 0 0;
 
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    margin: 38px 0 0;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }

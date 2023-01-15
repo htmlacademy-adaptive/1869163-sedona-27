@@ -4,7 +4,7 @@
   min-height: 158px;
   width: 100%;
 
-  padding: 90px 0;
+  padding: 88px 0;
 
   background-image: url("../img/hero-mobile.jpg");
   background-position: center;
@@ -12,12 +12,33 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &--alt {
+    padding: 53px 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 95px 0 91px;
+
+      background-position: bottom;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 102px 0 91px;
+    }
+  }
+
+  &--index {
+    @media (min-width: $tablet-width) {
+      padding: 77px 0 91px;
+    }
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     min-height: 290px;
+
     background-image: url("../img/hero-tablet.jpg");
 
     @media (min-resolution: 2dppx) {

@@ -3,11 +3,20 @@
   font-style: normal;
   text-transform: uppercase;
 
-  min-height: 210px;
   max-width: 484px;
 
-  padding: 40px 20px;
+  padding: 32px 30px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 48px 0;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 0 45px;
+    margin-bottom: 0;
+  }
 
   @include flex-center(column);
 }
@@ -16,6 +25,12 @@
   margin: 0 0 35px;
 
   @include big-text(700);
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 28px;
+
+    @include huge-text(700);
+  }
 }
 
 .heading__description {
