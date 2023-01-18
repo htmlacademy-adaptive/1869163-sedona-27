@@ -1,0 +1,31 @@
+.feedback__heading {
+  padding: 36px 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 62px 0 70px;
+    max-width: 438px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 114px 0 61px;
+  }
+}
+
+.feedback .heading__title {
+  margin: 0 0 23px;
+
+  @media (min-width: $tablet-width) {
+    @include gigantic-text(700);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 29px;
+  }
+}
+
+.feedback .heading__description {
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

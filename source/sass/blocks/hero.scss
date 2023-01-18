@@ -14,11 +14,10 @@
 
   &--alt {
     padding: 53px 0;
+    background-position: bottom;
 
     @media (min-width: $tablet-width) {
       padding: 95px 0 91px;
-
-      background-position: bottom;
     }
 
     @media (min-width: $desktop-width) {

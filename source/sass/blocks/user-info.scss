@@ -1,14 +1,15 @@
 .user-info {
   position: relative;
 
-  margin: 0 20px 50px;
+  margin: 0 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 90px;
 
-    margin: 0 60px 50px;
+    margin: 30px 20px 17px;
 
     &::before {
       position: absolute;
@@ -16,16 +17,23 @@
       content: "";
 
       width: 1px;
-      height: 100%;
+      height: 91%;
 
       right: 50%;
 
       background-color: #dbdbdb;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 6px 120px 21px;
+
+    justify-content: space-between;
+  }
 }
 
-.user-info .form__heading {
+.user-info .form-block:first-child,
+.user-info .form-block:last-child {
   position: relative;
 
   &::before {
@@ -33,21 +41,41 @@
 
     content: "";
 
-    width: 500%;
+    width: 100%;
     height: 1px;
 
-    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+
+    transform: translateX(-50%);
 
     background-color: #dbdbdb;
 
     @media (min-width: $tablet-width) {
-      background-color: transparent;
+      display: none;
     }
   }
 }
 
-.user-info .form__block {
-  margin-bottom: 50px;
+.user-info .form-block:first-child {
+  &::before {
+    top: -50px;
+  }
+}
+
+.user-info .form-block:last-child {
+  &::before {
+    top: -50px;
+  }
+}
+
+.user-info .form__heading {
+  @media (min-width: $tablet-width) {
+    padding: 0 0 10px;
+  }
+}
+
+.user-info .input-text__field {
+  @media (min-width: $tablet-width) {
+    width: 277px;
+  }
 }

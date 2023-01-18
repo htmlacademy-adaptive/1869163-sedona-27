@@ -141,5 +141,6 @@
 }
 
 .card__number {
-  max-width: 60px;
+  max-width: 100px;
+  overflow-wrap: anywhere;
 }

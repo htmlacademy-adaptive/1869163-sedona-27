@@ -1,14 +1,35 @@
-.opinion {
-  height: 160px;
+.opinion .input-text {
+  @media (min-width: $tablet-width) {
+    margin-top: 26px;
+  }
+}
+
+.opinion__field {
+  height: 150px;
   min-width: 280px;
 
   padding: 16px;
 
+  position: relative;
+
+  margin-top: -7px;
+
   @media (min-width: $tablet-width) {
     min-width: 648px;
+    height: 160px;
+
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 768px;
   }
+}
+
+.opinion__field::placeholder {
+  position: absolute;
+  top: 20px;
+  white-space: pre-line;
+
+  letter-spacing: -1.4px;
 }
