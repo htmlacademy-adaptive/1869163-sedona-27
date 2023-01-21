@@ -19,7 +19,7 @@
 <body>
   <div class="body-container">
 
-    <header class="header">
+    <header class="header header--nojs">
       <a class="header__logo logo" href="index.html" aria-label="Ссылка на главную страницу">
         <img class="logo__image" src="img/logo.svg" width="185" height="96" alt="Логотип «Седона».">
       </a>
@@ -75,23 +75,23 @@
             <fieldset class="form__block form-block">
               <legend class="form__heading">Представьтесь:</legend>
 
-              <ul class="form-block__name-list">
+              <ul class="form-block__name-list form-block__name-list--first">
                 <li class="form-block__name-item input-text"><label class="form-block__title"
                     for="first-name">Имя*:</label>
                   <input class="input-text__field" type="text" id="first-name" name="first-name"
-                    placeholder="Укажите имя" required>
+                    placeholder="Укажите имя" value="Пётр" required>
                 </li>
 
                 <li class="form-block__name-item input-text"><label class="form-block__title"
                     for="last-name">Фамилия*:</label>
                   <input class="input-text__field" type="text" id="last-name" name="last-name"
-                    placeholder="Укажите фамилию" required>
+                    placeholder="Укажите фамилию" value="Пустота" required>
                 </li>
 
                 <li class="form-block__name-item input-text"><label class="form-block__title"
                     for="patronym">Отчество:</label>
                   <input class="input-text__field" type="text" id="patronym" name="patronym"
-                    placeholder="Укажите отчество">
+                    placeholder="Укажите отчество" value="Викторович">
                 </li>
               </ul>
             </fieldset>
@@ -99,7 +99,7 @@
             <fieldset class="form__block form-block">
               <legend class="form__heading">Контактная информация:</legend>
 
-              <ul class="form-block__name-list">
+              <ul class="form-block__name-list form-block__name-list--second">
                 <li class="form-block__name-item input-text"><label class="form-block__title" for="mobile">Контактный
                     телефон*:</label>
                   <input class="input-text__field input-text__field--icon-phone" type="text" id="mobile" name="mobile"
@@ -164,15 +164,11 @@
 
 
             <div class="grade-wrapper">
-              <fieldset class="form__block form-block opinion">
-                <legend class="form__heading">Опишите свои эмоции:</legend>
-
-                <div class="input-text">
-                  <label class="visually-hidden" for="review">Поделитесь с нами своими эмоциями.</label>
-                  <input class="input-text__field opinion__field" type="text" id="review" name="review"
-                    placeholder="Опишите подробно все свои восторги">
-                </div>
-              </fieldset>
+              <div class="input-text">
+                <label class="form__heading form__heading--opinion" for="review">Опишите свои эмоции:</label>
+                <textarea class="input-text__field opinion__field" placeholder="Опишите подробно все свои восторги"
+                  id="review" name="review"></textarea>
+              </div>
             </div>
 
             <div class="form__submit">

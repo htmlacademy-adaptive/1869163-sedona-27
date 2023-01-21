@@ -40,15 +40,15 @@
 .list-secondary .advantages__item--secondary:first-child::after,
 .list-secondary .advantages__item--secondary:nth-child(2)::after {
   content: "";
+
   position: absolute;
+
   right: 50%;
   bottom: 11px;
   transform: translateX(50%);
 
-  width: 100%;
+  width: 86%;
   height: 1px;
-
-  margin: 0 20px;
 
   background: #d6d6d6;
 

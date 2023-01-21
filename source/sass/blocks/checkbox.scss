@@ -5,7 +5,7 @@
 
   &::before {
     position: absolute;
-    top: 50%;
+    top: 12px;
     left: -60px;
 
     width: 46px;
@@ -21,8 +21,8 @@
 
 .checkbox__input:checked + .checkbox__label::after {
   position: absolute;
-  top: 50%;
-  left: -47px;
+  top: 12px;
+  left: -49px;
 
   width: 22px;
   height: 16px;

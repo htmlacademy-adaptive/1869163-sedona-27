@@ -23,6 +23,24 @@
   }
 }
 
+.grade-wrapper .form-block {
+  @media (min-width: $tablet-width) {
+    width: 648px;
+
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.grade-wrapper:nth-child(2)::before {
+  @media (min-width: $tablet-width) {
+    top: 28px;
+  }
+}
+
 .grade-wrapper .form-block:first-child {
   padding-bottom: 7px;
 
@@ -44,5 +62,15 @@
     margin-bottom: 0;
 
     position: relative;
+  }
+}
+
+.grade-wrapper .form__heading--opinion {
+  display: block;
+  padding: 12px 0 0;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 3px 0 0;
   }
 }

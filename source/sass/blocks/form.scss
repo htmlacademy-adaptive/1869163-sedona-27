@@ -8,6 +8,7 @@
 
   overflow-wrap: break-word;
 
+  max-width: 270px;
   margin: 0;
   padding: 22px 0 0;
 
@@ -62,7 +63,7 @@
   @media (min-width: $desktop-width) {
     padding: 16px 101px;
 
-    margin-top: 55px;
+    margin-top: 47px;
   }
 
   &:hover {
