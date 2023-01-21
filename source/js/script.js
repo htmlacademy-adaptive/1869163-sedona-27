@@ -1,7 +1,7 @@
-const navMain = document.querySelector(".nav");
-const navToggle = document.querySelector(".nav__toggle");
-const header = document.querySelector(".header");
-const map = document.querySelector(".map");
+let navMain = document.querySelector(".nav");
+let navToggle = document.querySelector(".nav__toggle");
+let header = document.querySelector(".header");
+let map = document.querySelector(".map");
 
 navMain.classList.remove("nav--nojs");
 navMain.classList.add("nav--closed");
