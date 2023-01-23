@@ -2,6 +2,12 @@ $tablet-width: 768px;
 $desktop-width: 1200px;
 $mobile-width-only: 767px;
 
+@mixin gigantic-text($weight) {
+  font-weight: $weight;
+  font-size: 30px;
+  line-height: 26px;
+}
+
 @mixin huge-text($weight) {
   font-weight: $weight;
   font-size: 21px;

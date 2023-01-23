@@ -1,14 +1,37 @@
-.opinion {
-  height: 160px;
+.opinion .input-text {
+  @media (min-width: $tablet-width) {
+    margin-top: 26px;
+  }
+}
+
+.opinion__field {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-style: normal;
+
+  height: 150px;
   min-width: 280px;
 
-  padding: 16px;
+  padding: 15px;
+  margin-top: 24px;
+
+  resize: none;
 
   @media (min-width: $tablet-width) {
     min-width: 648px;
+    height: 160px;
+
+    padding: 20px 15px;
+    margin-top: 23px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 768px;
   }
+}
+
+.opinion__field::placeholder {
+  color: #3333334d;
+  white-space: pre-line;
+
+  letter-spacing: 0.1px;
 }

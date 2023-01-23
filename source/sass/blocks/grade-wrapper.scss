@@ -1,27 +1,79 @@
 .grade-wrapper {
   width: 100%;
-
   position: relative;
 
   &::before {
     position: absolute;
+
     content: "";
 
-    width: 200%;
+    width: 100%;
     height: 1px;
+
+    top: -11px;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     background-color: #dbdbdb;
 
-    top: 0;
-    right: -50%;
-
     @media (min-width: $tablet-width) {
-      width: 100%;
-
       top: 13px;
-      left: 50%;
-
-      transform: translateX(-50%);
     }
+  }
+}
+
+.grade-wrapper .form-block {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+
+    padding: 0 0 48px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.grade-wrapper:nth-child(2)::before {
+  @media (min-width: $tablet-width) {
+    top: 28px;
+  }
+}
+
+.grade-wrapper .form-block:first-child {
+  padding-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -8px;
+  }
+}
+
+.grade-wrapper .form__heading {
+  padding: 15px 0 0;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding: 2px 66px 2px;
+    margin-bottom: 0;
+
+    position: relative;
+  }
+}
+
+.grade-wrapper .form__heading--opinion {
+  display: block;
+  padding: 12px 0 0;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 3px 0 0;
   }
 }

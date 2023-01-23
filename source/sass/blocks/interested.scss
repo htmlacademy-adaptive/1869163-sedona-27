@@ -1,30 +1,52 @@
 .interested {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
 
   text-transform: uppercase;
   padding: 38px 18px 49px;
-  margin: 0 auto;
 
-  min-height: 290px;
-  max-width: 435px;
+  @include flex-center(column);
+
+  @media (min-width: $tablet-width) {
+    padding: 63px 18px 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 63px 18px 66px;
+  }
 }
 
 .interested__title {
   font-style: normal;
 
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 
   @include huge-text(700);
+
+  @media (min-width: $tablet-width) {
+    @include gigantic-text(700);
+
+    margin: 0 0 32px;
+  }
 }
 
 .interested__description {
   font-style: normal;
 
-  margin: 0 0 50px;
+  margin: 0 0 33px;
+  max-width: 435px;
 
   @include regular-text(400);
 
   color: #333333;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 45px;
+    max-width: 435px;
+  }
 }
 
 .interested__button {
@@ -40,5 +62,18 @@
 
   @media (min-width: $tablet-width) {
     min-width: 458px;
+  }
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: #ffffff4d;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
   }
 }

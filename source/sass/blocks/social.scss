@@ -1,4 +1,6 @@
 .social {
+  margin-top: 32px;
+
   @media (min-width: $tablet-width) {
     margin: 0 auto;
   }
@@ -27,6 +29,28 @@
   background-color: #81b3d2;
 
   position: relative;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:focus-within {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+.social__link--vkontakte:active::before,
+.social__link--telegram:active::before,
+.social__link--youtube:active::before {
+  opacity: 0.3;
 }
 
 .social__link {

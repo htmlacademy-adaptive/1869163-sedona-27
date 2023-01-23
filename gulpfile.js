@@ -5,6 +5,7 @@ import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import csso from "postcss-csso";
 import rename from "gulp-rename";
+import terser from "gulp-terser";
 import squoosh from "gulp-libsquoosh";
 import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
@@ -34,7 +35,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp
-    .src("source/js/script.js")
+    .src("source/js/*.js")
     .pipe(gulp.dest("build/js"))
     .pipe(browser.stream());
 };
@@ -73,7 +74,7 @@ const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest("build/img"));
 
-const sprite = () => {
+export const sprite = () => {
   return gulp
     .src("source/img/icons/*.svg")
     .pipe(svgo())
@@ -90,9 +91,16 @@ const sprite = () => {
 
 const copy = (done) => {
   gulp
-    .src(["source/fonts/*.{woff2,woff}", "source/*.ico"], {
-      base: "source",
-    })
+    .src(
+      [
+        "source/fonts/*.{woff2,woff}",
+        "source/*.ico",
+        "source/manifest.webmanifest",
+      ],
+      {
+        base: "source",
+      }
+    )
     .pipe(gulp.dest("build"));
   done();
 };

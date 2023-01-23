@@ -1,0 +1,174 @@
+.modal {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-style: normal;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #0000004d;
+}
+
+.modal__error--close {
+  display: none;
+}
+
+.modal__success--close {
+  display: none;
+}
+
+.modal__content,
+.modal__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.modal__success--close .modal__content {
+  gap: 34px;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+  }
+}
+
+.modal__text-wrapper {
+  padding: 0 42px;
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+  }
+}
+
+.modal__success--close .modal__text-wrapper {
+  padding: 0 42px 10px;
+
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 75px 18px;
+
+    gap: 22px;
+  }
+}
+
+.modal__auth {
+  position: absolute;
+
+  width: 320px;
+
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 45px 0 0;
+
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px #00010126;
+
+  @media (min-width: $tablet-width) {
+    min-height: 347px;
+    width: 400px;
+
+    padding: 38px 0 0;
+  }
+}
+
+.modal__success--close .modal__auth {
+  @media (min-width: $tablet-width) {
+    width: 640px;
+
+    padding: 38px 0 0;
+  }
+}
+
+.modal__title {
+  @include big-text(700);
+
+  margin: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+
+    margin: 0 40px;
+    padding-top: 10px;
+  }
+}
+
+.modal__description {
+  @include regular-text(400);
+
+  margin: 0;
+
+  color: #333333;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.modal__button-wrapper {
+  padding-bottom: 35px;
+}
+
+.modal__success--close .modal__button-wrapper {
+  width: 100%;
+
+  padding: 20px;
+
+  background-color: #f2f2f2;
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 20px;
+  }
+}
+
+.modal__button {
+  @include big-text(700);
+
+  min-width: 180px;
+  min-height: 58px;
+
+  margin: 0 auto;
+  padding: 18px 20px 14px;
+
+  background-color: #81b3d2;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: #ffffff4d;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 272px;
+
+    font-size: 21px;
+  }
+}
+
+.modal__success--close .modal__button {
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
+}

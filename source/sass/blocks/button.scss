@@ -1,5 +1,5 @@
 .button {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
@@ -7,4 +7,8 @@
   text-transform: uppercase;
 
   border: none;
+  display: block;
+  cursor: pointer;
+
+  overflow-wrap: anywhere;
 }

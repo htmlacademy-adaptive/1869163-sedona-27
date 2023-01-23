@@ -1,23 +1,51 @@
 .form-block {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
 
   margin: 0;
-  padding: 0;
+  padding: 0 0 45px;
 
   min-height: 200px;
 
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 48px;
+  }
 }
 
 .form-block__title {
   @include regular-text(400);
 
-  margin: 16px auto 0 0;
+  overflow-wrap: break-word;
+
+  max-width: 239px;
+
+  margin: 18px auto -1px 16px;
 
   text-transform: uppercase;
 
   color: #333333;
+
+  &--name {
+    margin-top: 19px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 18px;
+    }
+  }
+
+  &--email {
+    margin-top: 17px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 17px;
+  }
 }
 
 .form-block__name-list {
@@ -25,34 +53,82 @@
   padding: 0;
 
   list-style: none;
+
+  &--first {
+    margin-top: 1px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      padding-left: 1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 60px;
+    }
+  }
+
+  &--second {
+    @media (min-width: $tablet-width) {
+      padding-left: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 64px;
+    }
+  }
 }
 
 .form-block__grade-list {
   @include big-text(700);
 
-  margin: 0;
+  margin: 2px 0 0;
   padding: 0;
 
   list-style: none;
 
   text-align: start;
 
+  &--radio {
+    @media (min-width: $tablet-width) {
+      column-gap: 13px;
+      margin: 35px 34px 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 55px 37px 17px 34px;
+
+      gap: 64px;
+    }
+  }
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      column-gap: 31px;
+      margin: 37px 84px 13px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 68px 37px 66px 34px;
+      gap: 65px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 50px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
   }
 }
 
 .form-block__grade-item {
-  margin: 0 0 50px 30px;
+  margin: 0 0 37px 21px;
+
+  max-width: 300px;
 }
 
 .form-block__name-item {

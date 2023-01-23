@@ -8,4 +8,12 @@
 
   display: flex;
   flex-direction: column;
+
+  &--nojs {
+    padding-top: 100px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
+  }
 }

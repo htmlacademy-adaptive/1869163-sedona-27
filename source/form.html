@@ -10,16 +10,20 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 </head>
 
 <body>
   <div class="body-container">
 
-    <header class="header">
+    <header class="header header--nojs">
       <a class="header__logo logo" href="index.html" aria-label="Ссылка на главную страницу">
         <img class="logo__image" src="img/logo.svg" width="185" height="96" alt="Логотип «Седона».">
       </a>
-      <nav class="nav nav--closed nav--nojs">
+      <nav class="nav nav--opened nav--nojs">
         <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть и закрыть меню</span></button>
         <div class="nav__wrapper">
           <ul class="nav__list">
@@ -34,7 +38,7 @@
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link">
+              <a class="nav__link nav__link--current">
                 Форма отзыва
               </a>
             </li>
@@ -50,7 +54,7 @@
 
     <main class="main-container">
 
-      <div class="hero">
+      <div class="hero hero--alt">
         <h1 class="visually-hidden">Форма для вашего отзыва.</h1>
         <div class="hero__img">
           <img class="hero__logo--short" src="img/hero-catalog.svg" alt="Природные достопримечательности Седоны."
@@ -59,7 +63,7 @@
       </div>
 
       <section class="feedback">
-        <div class="feadback__heading heading">
+        <div class="feedback__heading heading">
           <h2 class="heading__title">Оставьте свой отзыв</h2>
           <p class="heading__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
             вами достопримечательностях</p>
@@ -71,23 +75,23 @@
             <fieldset class="form__block form-block">
               <legend class="form__heading">Представьтесь:</legend>
 
-              <ul class="form-block__name-list">
-                <li class="form-block__name-item input-text"><label class="form-block__title"
+              <ul class="form-block__name-list form-block__name-list--first">
+                <li class="form-block__name-item input-text"><label class="form-block__title form-block__title--name"
                     for="first-name">Имя*:</label>
                   <input class="input-text__field" type="text" id="first-name" name="first-name"
-                    placeholder="Укажите имя" required>
+                    placeholder="Укажите имя" value="Пётр" required>
                 </li>
 
                 <li class="form-block__name-item input-text"><label class="form-block__title"
                     for="last-name">Фамилия*:</label>
                   <input class="input-text__field" type="text" id="last-name" name="last-name"
-                    placeholder="Укажите фамилию" required>
+                    placeholder="Укажите фамилию" value="Пустота" required>
                 </li>
 
                 <li class="form-block__name-item input-text"><label class="form-block__title"
                     for="patronym">Отчество:</label>
                   <input class="input-text__field" type="text" id="patronym" name="patronym"
-                    placeholder="Укажите отчество">
+                    placeholder="Укажите отчество" value="Викторович">
                 </li>
               </ul>
             </fieldset>
@@ -95,19 +99,18 @@
             <fieldset class="form__block form-block">
               <legend class="form__heading">Контактная информация:</legend>
 
-              <ul class="form-block__name-list">
-                <li class="form-block__name-item input-text input-text--icon"><label class="form-block__title"
-                    for="mobile">Контактный
+              <ul class="form-block__name-list form-block__name-list--second">
+                <li class="form-block__name-item input-text"><label class="form-block__title" for="mobile">Контактный
                     телефон*:</label>
-                  <input class="input-text__field" type="text" id="mobile" name="mobile" placeholder="Введите телефон"
-                    required>
+                  <input class="input-text__field input-text__field--icon-phone" type="text" id="mobile" name="mobile"
+                    placeholder="Введите телефон" required>
                 </li>
 
-                <li class="form-block__name-item input-text input-text--icon"><label class="form-block__title"
+                <li class="form-block__name-item input-text"><label class="form-block__title form-block__title--email"
                     for="email">Электронная
                     почта*:</label>
-                  <input class="input-text__field" type="text" id="email" name="email" placeholder="Введите e-mail"
-                    required>
+                  <input class="input-text__field input-text__field--icon-email" type="text" id="email" name="email"
+                    placeholder="Введите e-mail" required>
                 </li>
               </ul>
             </fieldset>
@@ -118,7 +121,7 @@
               <fieldset class="form__block form-block">
                 <legend class="form__heading">Ваше общее впечатление:</legend>
 
-                <ul class="form-block__grade-list">
+                <ul class="form-block__grade-list form-block__grade-list--radio">
                   <li class="form-block__grade-item radio">
                     <input class="radio__input" type="radio" id="positive" name="opinion" value="positive" checked>
                     <label class="radio__label" for="positive">Скорее положительное</label>
@@ -139,7 +142,7 @@
               <fieldset class="form__block form-block">
                 <legend class="form__heading">Посещенные достопримечательности:</legend>
 
-                <ul class="form-block__grade-list">
+                <ul class="form-block__grade-list form-block__grade-list--checkbox">
                   <li class="form-block__grade-item checkbox">
                     <input class="checkbox__input" type="checkbox" id="bridge" name="bridge" checked>
                     <label class="checkbox__label" for="bridge">Мост Дьявола</label>
@@ -162,15 +165,11 @@
 
 
             <div class="grade-wrapper">
-              <fieldset class="form__block form-block">
-                <legend class="form__heading">Опишите свои эмоции:</legend>
-
-                <div class="input-text">
-                  <label class="visually-hidden" for="review">Поделитесь с нами своими эмоциями.</label>
-                  <input class="input-text__field opinion" type="text" id="review" name="review"
-                    placeholder="Опишите подробно все свои восторги">
-                </div>
-              </fieldset>
+              <div class="input-text">
+                <label class="form__heading form__heading--opinion" for="review">Опишите свои эмоции:</label>
+                <textarea class="input-text__field opinion__field" placeholder="Опишите подробно все свои восторги"
+                  id="review" name="review"></textarea>
+              </div>
             </div>
 
             <div class="form__submit">
@@ -214,7 +213,7 @@
           </ul>
         </div>
 
-        <div class="footer__copyright-wrapper">
+        <div class="footer__copyright-wrapper footer__copyright-wrapper--alt">
           <a class="footer__copyright" href="https://htmlacademy.ru/">
             <span class="visually-hidden">Сайт разработчика.
             </span>
@@ -226,9 +225,38 @@
       </div>
     </footer>
 
+
+    <div class="modal modal__error modal__error--close">
+      <div class="modal__auth">
+        <section class="modal__content">
+          <div class="modal__text-wrapper">
+            <h2 class="modal__title">Что-то пошло не так!</h2>
+            <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          </div>
+          <div class="modal__button-wrapper">
+            <button class="button modal__button" type="button">Ок</button>
+          </div>
+        </section>
+      </div>
+    </div>
   </div>
 
-  <script src="js/script.js"></script>
+  <div class="modal modal__success modal__success--close">
+    <div class="modal__auth">
+      <section class="modal__content">
+        <div class="modal__text-wrapper">
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы
+            опубликуем его на сайте.</p>
+        </div>
+        <div class="modal__button-wrapper">
+          <button class="button modal__button" type="button">Закрыть окно</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/nav-script.js"></script>
 </body>
 
 </html>
