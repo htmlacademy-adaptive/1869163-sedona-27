@@ -1,6 +1,4 @@
 .grade {
-  margin: 0 20px;
-
   @media (min-width: $tablet-width) {
     @include flex-center(column);
     padding: 0;

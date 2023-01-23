@@ -39,7 +39,7 @@
 .nav__toggle {
   position: absolute;
   right: 18px;
-  top: 16px;
+  top: 18px;
   z-index: 2;
   display: block;
   width: 23px;
@@ -47,14 +47,6 @@
   background-color: #00000000;
   cursor: pointer;
   border: none;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:disabled {
-    opacity: 0.3;
-  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -76,35 +68,29 @@
   box-shadow: 0 8px 0 0 #81b3b2, 0 16px 0 0 #81b3b2;
 }
 
-.nav--closed .nav__toggle:active::before {
-  background-color: fade(#81b3b2, 30%);
-  box-shadow: 0 8px 0 0 fade(#81b3b2, 30%), 0 16px 0 0 fade(#81b3b2, 30%);
+.nav--opened .nav__toggle {
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 22px;
+    height: 22px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23 2.77477L20.0991 0L11.5 8.22522L2.9009 0L0 2.77477L8.5991 11L0 19.2252L2.9009 22L11.5 13.7748L20.0991 22L23 19.2252L14.4009 11L23 2.77477Z' fill='white'/%3E%3C/svg%3E");
+    background-position: center;
+  }
 }
 
-.nav--opened .nav__toggle {
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 22px;
-    height: 4px;
-    background-color: #ffffff;
-  }
+.nav__toggle:hover::before {
+  opacity: 0.6;
+}
 
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: fade(#ffffff, 30%);
-  }
+.nav__toggle:active::before {
+  opacity: 0.3;
 }
 
 .nav__list {

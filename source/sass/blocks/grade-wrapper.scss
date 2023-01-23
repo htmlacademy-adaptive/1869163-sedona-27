@@ -24,9 +24,12 @@
 }
 
 .grade-wrapper .form-block {
+  padding: 0 20px;
+
   @media (min-width: $tablet-width) {
     width: 648px;
 
+    padding: 0 0 48px;
     margin: 0 auto;
   }
 

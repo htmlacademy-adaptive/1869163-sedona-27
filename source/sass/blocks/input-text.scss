@@ -1,5 +1,5 @@
 .input-text {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
 }
 
@@ -29,6 +29,21 @@
       linear-gradient(to left, #e6e6e6 58px, transparent 58px);
     background-position: right 20px center, right center;
     background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+    background-color: #ffffff;
   }
 
   @media (min-width: $tablet-width) {

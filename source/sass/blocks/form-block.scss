@@ -26,6 +26,26 @@
   text-transform: uppercase;
 
   color: #333333;
+
+  &--name {
+    margin-top: 19px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 18px;
+    }
+  }
+
+  &--email {
+    margin-top: 17px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 17px;
+  }
 }
 
 .form-block__name-list {
@@ -39,7 +59,7 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
-      padding-left: 2px;
+      padding-left: 1px;
     }
 
     @media (min-width: $desktop-width) {
@@ -107,6 +127,8 @@
 
 .form-block__grade-item {
   margin: 0 0 37px 21px;
+
+  max-width: 300px;
 }
 
 .form-block__name-item {
