@@ -30,6 +30,10 @@
   background-color: #d5d5d5;
 }
 
+.radio__label:disabled::before {
+  background-color: #e3e3e3;
+}
+
 .radio__input:checked + .radio__label::after {
   position: absolute;
   top: 12px;
@@ -47,4 +51,8 @@
 
 .radio__input:checked + .radio__label:active::after {
   opacity: 0.3;
+}
+
+.radio__input:checked + .radio__label:disabled::after {
+  opacity: 0.1;
 }

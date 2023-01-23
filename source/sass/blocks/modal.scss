@@ -145,24 +145,25 @@
   background-color: #81b3d2;
   color: #ffffff;
 
-  &:hover {
-    background-color: #669ec0;
-  }
-
-  &:active {
-    background-color: #5496bd;
-    color: #ffffff4d;
-  }
-
-  &:disabled {
-    background-color: #e5e5e5;
-  }
-
   @media (min-width: $tablet-width) {
     min-width: 272px;
 
     font-size: 21px;
   }
+}
+
+.modal__button:hover,
+.modal__button:focus {
+  background-color: #669ec0;
+}
+
+.modal__button:active {
+  background-color: #5496bd;
+  color: #ffffff4d;
+}
+
+.modal__button:disabled {
+  background-color: #e5e5e5;
 }
 
 .modal__success--close .modal__button {

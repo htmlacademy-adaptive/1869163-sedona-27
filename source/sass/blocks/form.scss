@@ -65,19 +65,20 @@
 
     margin-top: 47px;
   }
+}
 
-  &:hover {
-    background-color: #669ec0;
-  }
+.form__button:hover,
+.form__button:focus {
+  background-color: #669ec0;
+}
 
-  &:active {
-    background-color: #5496bd;
-    color: #ffffff4d;
-  }
+.form__button:active {
+  background-color: #5496bd;
+  color: #ffffff4d;
+}
 
-  &:disabled {
-    background-color: #e5e5e5;
-  }
+.form__button:disabled {
+  background-color: #e5e5e5;
 }
 
 .form__note {

@@ -53,12 +53,13 @@
 
 .footer__copyright {
   color: #000000;
+}
 
-  &:hover {
-    color: #81b3d2;
-  }
+.footer__copyright:hover,
+.footer__copyright:focus {
+  color: #81b3d2;
+}
 
-  &:active {
-    color: #b3b3b3;
-  }
+.footer__copyright:active {
+  color: #b3b3b3;
 }

@@ -63,17 +63,18 @@
   @media (min-width: $tablet-width) {
     min-width: 458px;
   }
+}
 
-  &:hover {
-    background-color: #669ec0;
-  }
+.interested__button:hover,
+.interested__button:focus {
+  background-color: #669ec0;
+}
 
-  &:active {
-    background-color: #5496bd;
-    color: #ffffff4d;
-  }
+.interested__button:active {
+  background-color: #5496bd;
+  color: #ffffff4d;
+}
 
-  &:disabled {
-    background-color: #e5e5e5;
-  }
+.interested__button:disabled {
+  background-color: #e5e5e5;
 }
