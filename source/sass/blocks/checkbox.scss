@@ -28,6 +28,10 @@
   background-color: #d5d5d5;
 }
 
+.checkbox__label:disabled::before {
+  background-color: #e3e3e3;
+}
+
 .checkbox__input:checked + .checkbox__label::after {
   position: absolute;
   top: 12px;
@@ -46,4 +50,8 @@
 
 .checkbox__input:checked + .checkbox__label:active::after {
   opacity: 0.3;
+}
+
+.checkbox__input:checked + .checkbox__label:disabled::after {
+  opacity: 0.1;
 }

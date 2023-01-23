@@ -85,7 +85,8 @@
   }
 }
 
-.nav__toggle:hover::before {
+.nav__toggle:hover::before,
+.nav__toggle:focus::before {
   opacity: 0.6;
 }
 
@@ -178,25 +179,26 @@
       color: #766357;
     }
   }
+}
 
-  &:hover {
-    background-color: #669ec0;
+.nav__link:hover,
+.nav__link:focus {
+  background-color: #669ec0;
 
-    @media (min-width: $tablet-width) {
-      background-color: transparent;
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
 
-      color: #81b3d2;
-    }
+    color: #81b3d2;
   }
+}
 
-  &:active {
-    background-color: #5496bd;
-    color: #ffffff4d;
+.nav__link:active {
+  background-color: #5496bd;
+  color: #ffffff4d;
 
-    @media (min-width: $tablet-width) {
-      background-color: transparent;
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
 
-      color: #3333334d;
-    }
+    color: #3333334d;
   }
 }

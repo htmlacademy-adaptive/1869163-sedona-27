@@ -31,22 +31,22 @@
     background-repeat: no-repeat;
   }
 
-  &:hover {
-    background-color: #e5e5e5;
-  }
-
-  &:focus {
-    outline: none;
-    background-color: #e5e5e5;
-  }
-
-  &:active {
-    outline: 4px solid #e5e5e5;
-    outline-offset: -4px;
-    background-color: #ffffff;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 19px 16px 12px 12px;
   }
+}
+
+.input-text__field:hover {
+  background-color: #e5e5e5;
+}
+
+.input-text__field:focus {
+  outline: none;
+  background-color: #e5e5e5;
+}
+
+.input-text__field:active {
+  outline: 4px solid #e5e5e5;
+  outline-offset: -4px;
+  background-color: #ffffff;
 }
