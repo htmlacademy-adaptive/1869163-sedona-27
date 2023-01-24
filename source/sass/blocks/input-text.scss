@@ -1,9 +1,18 @@
 .input-text {
   font-family: "PT Sans", "Tahoma", sans-serif;
   font-style: normal;
+
+  &--opinion {
+    @media (min-width: $tablet-width) {
+      margin-top: 26px;
+    }
+  }
 }
 
 .input-text__field {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-style: normal;
+
   @include big-text(700);
 
   background-color: #f2f2f2;
@@ -31,9 +40,38 @@
     background-repeat: no-repeat;
   }
 
+  &--opinion {
+    height: 150px;
+    min-width: 280px;
+
+    padding: 15px;
+    margin-top: 24px;
+
+    resize: none;
+
+    @media (min-width: $tablet-width) {
+      min-width: 648px;
+      height: 160px;
+
+      padding: 20px 15px;
+      margin-top: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 768px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 19px 16px 12px 12px;
   }
+}
+
+.input-text__field--opinion::placeholder {
+  color: #3333334d;
+  white-space: pre-line;
+
+  letter-spacing: 0.1px;
 }
 
 .input-text__field:hover {
