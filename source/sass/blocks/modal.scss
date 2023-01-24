@@ -18,11 +18,11 @@
   background-color: #0000004d;
 }
 
-.modal__error--close {
+.modal--error-close {
   display: none;
 }
 
-.modal__success--close {
+.modal--success-close {
   display: none;
 }
 
@@ -33,7 +33,7 @@
   gap: 28px;
 }
 
-.modal__success--close .modal__content {
+.modal--success .modal__content {
   gap: 34px;
 
   @media (min-width: $tablet-width) {
@@ -49,7 +49,7 @@
   }
 }
 
-.modal__success--close .modal__text-wrapper {
+.modal--success .modal__text-wrapper {
   padding: 0 42px 10px;
 
   gap: 25px;
@@ -83,7 +83,7 @@
   }
 }
 
-.modal__success--close .modal__auth {
+.modal--success .modal__auth {
   @media (min-width: $tablet-width) {
     width: 640px;
 
@@ -121,7 +121,7 @@
   padding-bottom: 35px;
 }
 
-.modal__success--close .modal__button-wrapper {
+.modal--success .modal__button-wrapper {
   width: 100%;
 
   padding: 20px;
@@ -166,7 +166,7 @@
   background-color: #e5e5e5;
 }
 
-.modal__success--close .modal__button {
+.modal--success .modal__button {
   width: 280px;
 
   @media (min-width: $tablet-width) {
